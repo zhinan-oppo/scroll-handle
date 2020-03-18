@@ -17,7 +17,7 @@ type StateHandle = (
 ) => void | string;
 
 export interface ScrollHandlers {
-  onStateChange: (
+  onStateChange?: (
     dom: Element,
     newState: ScrollState,
     oldState: ScrollState
@@ -56,7 +56,7 @@ function getPercentFromPlacement(placement: PLACEMENT): number {
 
 const scrollHandle = ({
   dom,
-  handlers,
+  handlers = {},
   start = {
     placement: "bottom",
     distance: 0
