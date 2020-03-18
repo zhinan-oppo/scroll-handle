@@ -16,7 +16,7 @@ type StateHandle = (
   totalDistance: number
 ) => void | string;
 
-interface ScrollHandlers {
+export interface ScrollHandlers {
   onStateChange: (
     dom: Element,
     newState: ScrollState,
