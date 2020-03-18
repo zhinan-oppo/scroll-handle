@@ -19,13 +19,13 @@ function getPercentFromPlacement(placement) {
     return PLACEMENTS[placement] || 0;
 }
 var scrollHandle = function (_a) {
-    var dom = _a.dom, handlers = _a.handlers, _b = _a.start, start = _b === void 0 ? {
+    var dom = _a.dom, _b = _a.handlers, handlers = _b === void 0 ? {} : _b, _c = _a.start, start = _c === void 0 ? {
         placement: "bottom",
         distance: 0
-    } : _b, _c = _a.end, end = _c === void 0 ? {
+    } : _c, _d = _a.end, end = _d === void 0 ? {
         placement: "top",
         distance: 0
-    } : _c, _d = _a.addListener, addListener = _d === void 0 ? true : _d;
+    } : _d, _e = _a.addListener, addListener = _e === void 0 ? true : _e;
     var element;
     if (typeof dom === "string") {
         var doms = document.querySelectorAll(dom);
@@ -53,8 +53,8 @@ var scrollHandle = function (_a) {
             distance: 0
         };
     }
-    var startPercent = getPercentFromPlacement(start.placement);
-    var endPercent = getPercentFromPlacement(end.placement);
+    var startPercent = getPercentFromPlacement(start.placement || "bottom");
+    var endPercent = getPercentFromPlacement(end.placement || "top");
     var state = "before";
     var changeState = function (newState) {
         if (newState !== state) {
