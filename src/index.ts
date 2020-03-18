@@ -33,11 +33,11 @@ interface ScrollHandleOptions {
   handlers: ScrollHandlers;
   start: {
     placement: PLACEMENT;
-    distance: number;
+    distance?: number;
   };
   end: {
     placement: PLACEMENT;
-    distance: number;
+    distance?: number;
   };
   addListener: boolean;
 }
