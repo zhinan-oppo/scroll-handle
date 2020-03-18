@@ -1,0 +1,27 @@
+{
+  "name": "@zhinan-oppo/scroll-handle",
+  "version": "1.0.0",
+  "description": "A library to handle scroll event of browser. Apply custom callback when scolling into elements like inView event.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "parcel test/index.pug --out-dir test/dist"
+  },
+  "repository": "https://github.com/zhinan-oppo/scroll-handle",
+  "author": "xsfour",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "pug": "^2.0.4",
+    "stylus": "^0.54.7",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "lodash": "^4.17.15"
+  }
+}
