@@ -30,16 +30,16 @@ export interface ScrollHandlers {
 
 interface ScrollHandleOptions {
   dom: string | Element;
-  handlers: ScrollHandlers;
-  start: {
-    placement: PLACEMENT;
+  handlers?: ScrollHandlers;
+  start?: {
+    placement?: PLACEMENT;
     distance?: number;
   };
-  end: {
-    placement: PLACEMENT;
+  end?: {
+    placement?: PLACEMENT;
     distance?: number;
   };
-  addListener: boolean;
+  addListener?: boolean;
 }
 
 function warn(message: string): void {
@@ -96,8 +96,8 @@ const scrollHandle = ({
     };
   }
 
-  const startPercent = getPercentFromPlacement(start.placement);
-  const endPercent = getPercentFromPlacement(end.placement);
+  const startPercent = getPercentFromPlacement(start.placement || "bottom");
+  const endPercent = getPercentFromPlacement(end.placement || "top");
 
   let state: ScrollState = "before";
   const changeState = (newState: ScrollState): void => {
